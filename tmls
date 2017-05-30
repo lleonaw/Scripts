@@ -1,0 +1,4 @@
+#
+# List tmux sessions
+#
+tmux list-sessions

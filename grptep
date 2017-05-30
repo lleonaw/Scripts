@@ -1,0 +1,4 @@
+#
+# look at time steps when nekb is running 
+#
+grep tep logfile | tail

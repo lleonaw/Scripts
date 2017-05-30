@@ -1,0 +1,4 @@
+#
+# Re-attach tmux sessions 
+#
+tmux attach-session -t $1
