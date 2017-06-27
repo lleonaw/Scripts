@@ -1,4 +1,9 @@
 #
 # look at time steps when nekb is running 
 #
-grep -A1 MESH $1.rea
+if [ -z "$1" ];
+then
+  echo "Error:: forgot input "
+else
+  grep -A1 MESH $1.rea
+fi
