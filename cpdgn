@@ -1,3 +1,22 @@
-cp $1/dgf3.f $2/dgf3.f
-cp $1/DGUSE $2/DGUSE
-cp $1/SIZE $2/SIZE
+# Copy files needed for 
+if [ -e $2/DGTIMER ];
+then
+  echo "File $2/DGTIMER exists"
+else
+  cp $1/DGTIMER $2/DGTIMER
+  echo "$1/DGTIMER -> $2/DGTIMER"
+fi
+if [ -e $2/SIZE ];
+then
+  echo "File $2/SIZE exists"
+else
+  cp $1/SIZE $2/SIZE
+  echo "$1/SIZE -> $2/SIZE"
+fi
+if [ -e $2/MGUSE ];
+then
+  echo "File $2/MGUSE exists"
+else
+  cp $1/MGUSE $2/MGUSE
+  echo "$1/MGUSE -> $2/MGUSE"
+fi
