@@ -1,0 +1,4 @@
+#
+# auto scroll the logfile useing less
+#
+less +F logfile
