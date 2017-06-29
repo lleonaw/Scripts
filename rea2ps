@@ -1,0 +1,26 @@
+#!/bin/zsh
+#
+# Generates a ps file using prenek for $1.rea
+# 
+## Check first whether input is empty, then whether the rea file exists
+if [ -z "$1" ];
+then
+  echo "Error(1):: no input!"
+  exit
+elif [ ! -f "$1.rea" ];
+then
+  echo "Error(2):: $1.rea does not exist!"
+  exit
+fi
+
+## One file approach
+# echo 'litmp\n1\ninput\n1\ninput\n1\n1\n1\n1\n1' | sed "s/input/${1}/g" | pretex
+
+## Template approach
+sed "s/input/${1}/g" rea2ps.inp | pretex
+
+## Clean up
+mv litmp.rea $1_copy.rea
+mv litmp.dra $1.ps
+echo "rea2ps:: $1.ps generated"
+open $1.ps
