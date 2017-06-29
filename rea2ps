@@ -17,7 +17,8 @@ fi
 # echo 'litmp\n1\ninput\n1\ninput\n1\n1\n1\n1\n1' | sed "s/input/${1}/g" | pretex
 
 ## Template approach
-sed "s/input/${1}/g" rea2ps.inp | pretex
+TEMP="$HOME/bin/rea2ps.inp"
+sed "s/input/${1}/g" "$TEMP" | pretex
 
 ## Clean up
 mv litmp.rea $1_copy.rea
